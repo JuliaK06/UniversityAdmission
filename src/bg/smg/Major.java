@@ -4,10 +4,15 @@
  */
 package bg.smg;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author A
  */
 public class Major {
-    /*Not sure about this one/
+    //Not sure about this one
+    private ArrayList<Student> acceptedStudents;
+    
+    
 }
