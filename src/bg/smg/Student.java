@@ -17,13 +17,17 @@ private String lastName;
 private LocalDate birthDate;
 
   public Student() {
-    }
-  
-    public Student(String email, String firstName, String lastName, LocalDate birthdate) {
         this.email="";
         this.firstName=" ";
         this.lastName=" ";
         this.birthDate=null;
+    }
+  
+    public Student(String email, String firstName, String lastName, LocalDate birthdate) {
+        this.email=email;
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.birthDate=birthdate;
     }
   
 

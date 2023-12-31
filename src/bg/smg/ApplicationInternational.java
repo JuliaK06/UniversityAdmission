@@ -5,26 +5,31 @@
 package bg.smg;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  *
  * @author A
  */
-public class InternationalStudent extends Student{
+public class ApplicationInternational extends Application{
     private double TOEFlscore;
     private double IELTSscore;
     
- public InternationalStudent() {
+ public ApplicationInternational() {
         super();
         this.TOEFlscore = 0.0;
         this.IELTSscore = 0.0;
     }
- 
-    public InternationalStudent(double TOEFlscore, double IELTSscore, String email, String firstName, String lastName, LocalDate birthdate) {
-        super(email, firstName, lastName, birthdate);
+
+   
+
+    public ApplicationInternational(double TOEFlscore, double IELTSscore, Student student, List<String> majors, int SAT, int ACT, double GPA) {
+        super(student, majors, SAT, ACT, GPA);
         this.TOEFlscore = TOEFlscore;
         this.IELTSscore = IELTSscore;
     }
+ 
+  
 
    
 
