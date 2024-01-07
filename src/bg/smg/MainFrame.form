@@ -304,7 +304,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="ACTLbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="SAT score:"/>
+            <Property name="text" type="java.lang.String" value="ACT score:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="ACTScoreTxtfl">

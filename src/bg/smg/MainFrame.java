@@ -100,7 +100,7 @@ public class MainFrame extends javax.swing.JFrame {
         SATScore1Txtfl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
         SATScore1Txtfl.setText("Enter score");
 
-        ACTLbl.setText("SAT score:");
+        ACTLbl.setText("ACT score:");
 
         ACTScoreTxtfl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
         ACTScoreTxtfl.setText("Enter score");
