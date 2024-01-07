@@ -14,14 +14,15 @@ import java.util.List;
  * @author Mimi
  */
 public class MainFrame extends javax.swing.JFrame {
-   List<Application> applications;
-    
+
+    List<Application> applications;
+
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
-       applications = new ArrayList();
+        applications = new ArrayList();
         WhenInternationalPnl.setVisible(false);
     }
 
@@ -44,10 +45,10 @@ public class MainFrame extends javax.swing.JFrame {
         LastNameTxtfl = new javax.swing.JTextField();
         DateOfBirthLbl = new javax.swing.JLabel();
         BirthDateFtxf = new javax.swing.JFormattedTextField();
-        SAT1Lbl = new javax.swing.JLabel();
-        SATScore1Txtfl = new javax.swing.JFormattedTextField();
-        SAT2Lbl = new javax.swing.JLabel();
-        SATScore2Txtfl = new javax.swing.JFormattedTextField();
+        SATLbl = new javax.swing.JLabel();
+        SATScoreTxtfl = new javax.swing.JFormattedTextField();
+        ACTLbl = new javax.swing.JLabel();
+        ACTScoreTxtfl = new javax.swing.JFormattedTextField();
         GPALbl = new javax.swing.JLabel();
         GPATxtfl = new javax.swing.JFormattedTextField();
         FirstMajorLbl = new javax.swing.JLabel();
@@ -98,26 +99,32 @@ public class MainFrame extends javax.swing.JFrame {
         DateOfBirthLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DateOfBirthLbl.setText("Date of birth:");
 
-        BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/yy"))));
         BirthDateFtxf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BirthDateFtxfActionPerformed(evt);
             }
         });
 
-        SAT1Lbl.setText("SAT score:");
+        SATLbl.setText("SAT score:");
 
-        SATScore1Txtfl.setText("Enter SAT score");
-        SATScore1Txtfl.setToolTipText("");
-        SATScore1Txtfl.addActionListener(new java.awt.event.ActionListener() {
+        SATScoreTxtfl.setText("Enter SAT score");
+        SATScoreTxtfl.setToolTipText("");
+        SATScoreTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SATScore1TxtflActionPerformed(evt);
+                SATScoreTxtflActionPerformed(evt);
             }
         });
 
-        SAT2Lbl.setText("ACT score");
+        ACTLbl.setText("ACT score");
 
-        SATScore2Txtfl.setText("Enter SAT score");
+        ACTScoreTxtfl.setText("Enter ACT score");
+        ACTScoreTxtfl.setToolTipText("");
+        ACTScoreTxtfl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ACTScoreTxtflActionPerformed(evt);
+            }
+        });
 
         GPALbl.setText("GPA:");
 
@@ -261,14 +268,14 @@ public class MainFrame extends javax.swing.JFrame {
                                         .addComponent(SecondMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(SAT1Lbl)
-                                        .addComponent(SAT2Lbl)
+                                        .addComponent(SATLbl)
+                                        .addComponent(ACTLbl)
                                         .addComponent(GPALbl))
                                     .addGap(39, 39, 39)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(SATScore2Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(SATScore1Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(ACTScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(SATScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addContainerGap(41, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(SaveBtn)
@@ -300,12 +307,12 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(BirthDateFtxf, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(SAT1Lbl)
-                        .addComponent(SATScore1Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(SATLbl)
+                        .addComponent(SATScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(SAT2Lbl)
-                        .addComponent(SATScore2Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ACTLbl)
+                        .addComponent(ACTScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(GPALbl)
@@ -399,7 +406,7 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NoRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoRBtnActionPerformed
-       WhenInternationalPnl.setVisible(false); // TODO add your handling code here:
+        WhenInternationalPnl.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_NoRBtnActionPerformed
 
     private void IeltsTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IeltsTxtflActionPerformed
@@ -415,37 +422,47 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_LastNameTxtflActionPerformed
 
     private void YesRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesRBtnActionPerformed
-      WhenInternationalPnl.setVisible(true);// TODO add your handling code here:
+        WhenInternationalPnl.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_YesRBtnActionPerformed
 
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
-   Application appl=new Application();
-   Student s=new Student();
-   if(YesRBtn.isSelected()){
-       s=new InternationalStudent();
-       ((InternationalStudent)s).setTOEFlscore(Integer.parseInt(ToeflTxtfl.getText()));
-       ((InternationalStudent)s).setIELTSscore(Double.parseDouble(IeltsTxtfl.getText()));
-   } 
+        Application appl = new Application();
+        Student s = new Student();
+        if (YesRBtn.isSelected()) {
+            s = new InternationalStudent();
+            ((InternationalStudent) s).setTOEFlscore(Integer.parseInt(ToeflTxtfl.getText()));
+            ((InternationalStudent) s).setIELTSscore(Double.parseDouble(IeltsTxtfl.getText()));
+        }
         s.setEmail(EmailTxtfl.getText());
         s.setFirstName(FirstNameTxtfl.getText());
         s.setLastName(LastNameTxtfl.getText());
-        s.setBirthDate((Date)BirthDateFtxf.getValue());
-       appl.setStudent(s);
-       appl.setACT(Integer.parseInt(SATScore2Txtfl.getText()));
-       appl.setSAT(Integer.parseInt(SATScore1Txtfl.getText()));
-       appl.setGPA(Double.parseDouble(GPATxtfl.getText()));
-       List<String>majors=new ArrayList();
-       String m1=FirstMajorComboBox.getSelectedItem().toString();
-       majors.add(m1);
-       String m2=SecondMajorComboBox.getSelectedItem().toString();
-       majors.add(m2);
-       String m3=ThirdMajorComboBox.getSelectedItem().toString();
-       majors.add(m3);
-       appl.setListMajors(majors);
-       applications.add(appl);
-  
-               
-      
+        s.setBirthDate((Date) BirthDateFtxf.getValue());
+        appl.setStudent(s);
+        appl.setACT(Integer.parseInt(ACTScoreTxtfl.getText()));
+        appl.setSAT(Integer.parseInt(SATScoreTxtfl.getText()));
+        appl.setGPA(Double.parseDouble(GPATxtfl.getText()));
+        List<String> majors = new ArrayList();
+        String m1 = FirstMajorComboBox.getSelectedItem().toString();
+        majors.add(m1);
+        String m2 = SecondMajorComboBox.getSelectedItem().toString();
+        majors.add(m2);
+        String m3 = ThirdMajorComboBox.getSelectedItem().toString();
+        majors.add(m3);
+        appl.setListMajors(majors);
+        applications.add(appl);
+        
+        FirstMajorComboBox.setSelectedIndex(0);
+        SecondMajorComboBox.setSelectedIndex(0);
+        ThirdMajorComboBox.setSelectedIndex(0);
+        ACTScoreTxtfl.setText("Enter ACT score");
+        SATScoreTxtfl.setText("Enter ACT score");
+        GPATxtfl.setText("Enter GPA score");
+        EmailTxtfl.setText("");
+        FirstNameTxtfl.setText("");
+        LastNameTxtfl.setText("");
+        IeltsTxtfl.setText("Score");
+        ToeflTxtfl.setText("Score");
+
     }//GEN-LAST:event_SaveBtnActionPerformed
 
     private void FirstMajorComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBoxActionPerformed
@@ -460,7 +477,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
-        
+
         jPanel1.setVisible(false);
         jPanel2.setVisible(true);
     }//GEN-LAST:event_jMenu2MouseClicked
@@ -469,9 +486,13 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BirthDateFtxfActionPerformed
 
-    private void SATScore1TxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SATScore1TxtflActionPerformed
+    private void SATScoreTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SATScoreTxtflActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SATScore1TxtflActionPerformed
+    }//GEN-LAST:event_SATScoreTxtflActionPerformed
+
+    private void ACTScoreTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ACTScoreTxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ACTScoreTxtflActionPerformed
 
     /**
      * @param args the command line arguments
@@ -509,6 +530,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ACTLbl;
+    private javax.swing.JFormattedTextField ACTScoreTxtfl;
     private javax.swing.JFormattedTextField BirthDateFtxf;
     private javax.swing.JLabel DateOfBirthLbl;
     private javax.swing.JLabel EmailLbl;
@@ -526,10 +549,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel LastNameLbl;
     private javax.swing.JTextField LastNameTxtfl;
     private javax.swing.JRadioButton NoRBtn;
-    private javax.swing.JLabel SAT1Lbl;
-    private javax.swing.JLabel SAT2Lbl;
-    private javax.swing.JFormattedTextField SATScore1Txtfl;
-    private javax.swing.JFormattedTextField SATScore2Txtfl;
+    private javax.swing.JLabel SATLbl;
+    private javax.swing.JFormattedTextField SATScoreTxtfl;
     private javax.swing.JButton SaveBtn;
     private javax.swing.JComboBox<String> SecondMajorComboBox;
     private javax.swing.JLabel SecondMajorLbl;

@@ -4,7 +4,8 @@
  */
 package bg.smg;
 
-import java.time.LocalDate;
+
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,7 +31,7 @@ public class InternationalStudent extends Student{
         this.IELTSscore = IELTSscore;
     }
 
-    public InternationalStudent(int TOEFlscore, double IELTSscore, String email, String firstName, String lastName, LocalDate birthdate) {
+    public InternationalStudent(int TOEFlscore, double IELTSscore, String email, String firstName, String lastName, Date birthdate) {
         super(email, firstName, lastName, birthdate);
         this.TOEFlscore = TOEFlscore;
         this.IELTSscore = IELTSscore;

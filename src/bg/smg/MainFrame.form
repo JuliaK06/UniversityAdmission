@@ -131,15 +131,15 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="SAT1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SAT2Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="SATLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ACTLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="GPALbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="GPATxtfl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SATScore2Txtfl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SATScore1Txtfl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ACTScoreTxtfl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="SATScoreTxtfl" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -185,13 +185,13 @@
                       </Group>
                       <EmptySpace pref="12" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SAT1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SATScore1Txtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="SATLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="SATScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SAT2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SATScore2Txtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ACTLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ACTScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -277,36 +277,40 @@
         <Component class="javax.swing.JFormattedTextField" name="BirthDateFtxf">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-              <Format subtype="1" type="1"/>
+              <Format format="MM/dd/yy" subtype="-1" type="1"/>
             </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BirthDateFtxfActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="SAT1Lbl">
+        <Component class="javax.swing.JLabel" name="SATLbl">
           <Properties>
             <Property name="text" type="java.lang.String" value="SAT score:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="SATScore1Txtfl">
+        <Component class="javax.swing.JFormattedTextField" name="SATScoreTxtfl">
           <Properties>
             <Property name="text" type="java.lang.String" value="Enter SAT score"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SATScore1TxtflActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SATScoreTxtflActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="SAT2Lbl">
+        <Component class="javax.swing.JLabel" name="ACTLbl">
           <Properties>
             <Property name="text" type="java.lang.String" value="ACT score"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="SATScore2Txtfl">
+        <Component class="javax.swing.JFormattedTextField" name="ACTScoreTxtfl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Enter SAT score"/>
+            <Property name="text" type="java.lang.String" value="Enter ACT score"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ACTScoreTxtflActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="GPALbl">
           <Properties>
