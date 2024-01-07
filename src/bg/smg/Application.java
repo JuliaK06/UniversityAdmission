@@ -34,16 +34,41 @@ public class Application {
   
    }
    
-   private Student getStudent(){
+   public Student getStudent(){
    return this.student;
    }
-   private void setStudent(Student student){
+   public void setStudent(Student student){
        this.student=student;
    }
-    private void setListMajors(List<String> majors){
+    public void setListMajors(List<String> majors){
        this.majors=majors;
    }
-     private List<String> getListMajors(){
+     public List<String> getListMajors(){
        return this.majors;
    }
+
+    public double getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    public int getSAT() {
+        return SAT;
+    }
+
+    public void setSAT(int SAT) {
+        this.SAT = SAT;
+    }
+
+    public int getACT() {
+        return ACT;
+    }
+
+    public void setACT(int ACT) {
+        this.ACT = ACT;
+    }
+     
 }

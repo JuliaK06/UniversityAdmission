@@ -4,6 +4,7 @@
  */
 package bg.smg;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,14 +13,14 @@ import java.util.List;
  * @author Mimi
  */
 public class MainFrame extends javax.swing.JFrame {
-   // List<Application> applications;
+   List<Application> applications;
     
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
-       // applications = new ArrayList();
+       applications = new ArrayList();
         WhenInternationalPnl.setVisible(false);
     }
 
@@ -102,7 +103,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         SATScore1Txtfl.setText("Enter SAT score");
 
-        SAT2Lbl.setText("SAT score:");
+        SAT2Lbl.setText("ACT score");
 
         SATScore2Txtfl.setText("Enter SAT score");
 
@@ -207,7 +208,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 406, Short.MAX_VALUE)
+            .addGap(0, 433, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -266,7 +267,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 564, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(48, 48, 48)
@@ -406,8 +407,19 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_YesRBtnActionPerformed
 
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
-  // appl = new applications.add(appl);
-                
+   Application appl=new Application();
+   Student s=new Student();
+   if(YesRBtn.isSelected()){
+       s=new InternationalStudent();
+       ((InternationalStudent)s).setTOEFlscore(Integer.parseInt(ToeflTxtfl.getText()));
+       ((InternationalStudent)s).setIELTSscore(Double.parseDouble(IeltsTxtfl.getText()));
+   } 
+        s.setEmail(EmailTxtfl.getText());
+        s.setFirstName(FirstNameTxtfl.getText());
+        s.setLastName(LastNameTxtfl.getText());
+        s.setBirthDate((LocalDate)BirthDateFtxf.getValue());
+       appl.setStudent(s);
+       appl.setACT(ABORT);
        
     }//GEN-LAST:event_SaveBtnActionPerformed
 
