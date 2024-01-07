@@ -41,8 +41,8 @@ public class MainFrame extends javax.swing.JFrame {
         BirthDateFtxf = new javax.swing.JFormattedTextField();
         SAT1Lbl = new javax.swing.JLabel();
         SATScore1Txtfl = new javax.swing.JFormattedTextField();
-        SAT2Lbl = new javax.swing.JLabel();
-        SATScore2Txtfl = new javax.swing.JFormattedTextField();
+        ACTLbl = new javax.swing.JLabel();
+        ACTScoreTxtfl = new javax.swing.JFormattedTextField();
         GPALbl = new javax.swing.JLabel();
         GPATxtfl = new javax.swing.JFormattedTextField();
         FirstMajorLbl = new javax.swing.JLabel();
@@ -97,15 +97,17 @@ public class MainFrame extends javax.swing.JFrame {
 
         SAT1Lbl.setText("SAT score:");
 
-        SATScore1Txtfl.setText("Enter SAT score");
+        SATScore1Txtfl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
+        SATScore1Txtfl.setText("Enter score");
 
-        SAT2Lbl.setText("SAT score:");
+        ACTLbl.setText("SAT score:");
 
-        SATScore2Txtfl.setText("Enter SAT score");
+        ACTScoreTxtfl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
+        ACTScoreTxtfl.setText("Enter score");
 
         GPALbl.setText("GPA:");
 
-        GPATxtfl.setText("Enter GPA");
+        GPATxtfl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
 
         FirstMajorLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         FirstMajorLbl.setText("1. Select first major");
@@ -203,7 +205,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(170, Short.MAX_VALUE)
                 .addComponent(SaveBtn)
                 .addGap(164, 164, 164))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -212,13 +214,13 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(SAT1Lbl)
-                            .addComponent(SAT2Lbl)
+                            .addComponent(ACTLbl)
                             .addComponent(GPALbl))
                         .addGap(39, 39, 39)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SATScore2Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SATScore1Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ACTScoreTxtfl)
+                            .addComponent(SATScore1Txtfl)
+                            .addComponent(GPATxtfl)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(DateOfBirthLbl)
@@ -229,9 +231,9 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(EmailTxtfl)
                             .addComponent(FirstNameTxtfl)
-                            .addComponent(LastNameTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BirthDateFtxf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(55, Short.MAX_VALUE))
+                            .addComponent(LastNameTxtfl, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                            .addComponent(BirthDateFtxf))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -288,8 +290,8 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(SATScore1Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SAT2Lbl)
-                    .addComponent(SATScore2Txtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ACTLbl)
+                    .addComponent(ACTScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GPALbl)
@@ -464,6 +466,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ACTLbl;
+    private javax.swing.JFormattedTextField ACTScoreTxtfl;
     private javax.swing.JFormattedTextField BirthDateFtxf;
     private javax.swing.JLabel DateOfBirthLbl;
     private javax.swing.JLabel EmailLbl;
@@ -482,9 +486,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField LastNameTxtfl;
     private javax.swing.JRadioButton NoRBtn;
     private javax.swing.JLabel SAT1Lbl;
-    private javax.swing.JLabel SAT2Lbl;
     private javax.swing.JFormattedTextField SATScore1Txtfl;
-    private javax.swing.JFormattedTextField SATScore2Txtfl;
     private javax.swing.JButton SaveBtn;
     private javax.swing.JComboBox<String> SecondMajorComboBox;
     private javax.swing.JLabel SecondMajorLbl;
