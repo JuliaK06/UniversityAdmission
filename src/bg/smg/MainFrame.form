@@ -82,7 +82,45 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="406" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="SAT1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="SAT2Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="GPALbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="GPATxtfl" min="-2" max="-2" attributes="0"/>
+                              <Component id="SATScore2Txtfl" min="-2" max="-2" attributes="0"/>
+                              <Component id="SATScore1Txtfl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="DateOfBirthLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="FirstNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LastNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="EmailLbl" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="EmailTxtfl" alignment="0" max="32767" attributes="0"/>
+                              <Component id="FirstNameTxtfl" alignment="0" max="32767" attributes="0"/>
+                              <Component id="LastNameTxtfl" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
+                              <Component id="BirthDateFtxf" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="55" max="32767" attributes="0"/>
+              </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -102,21 +140,6 @@
                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                       <Component id="FirstMajorComboBox" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="DateOfBirthLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="EmailLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="FirstNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="LastNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="BirthDateFtxf" min="-2" pref="116" max="-2" attributes="0"/>
-                                          <Component id="EmailTxtfl" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="FirstNameTxtfl" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="LastNameTxtfl" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="ThirdMajorLbl" min="-2" max="-2" attributes="0"/>
@@ -129,25 +152,8 @@
                                           <Component id="SecondMajorComboBox" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="SAT1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SAT2Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="GPALbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="GPATxtfl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SATScore2Txtfl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SATScore1Txtfl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
                               </Group>
                               <EmptySpace pref="41" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="WhenInternationalPnl" max="32767" attributes="0"/>
@@ -160,45 +166,49 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="557" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="EmailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="EmailTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="FirstNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="FirstNameTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="LastNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LastNameTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="9" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BirthDateFtxf" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="DateOfBirthLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="SAT1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SATScore1Txtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="SAT2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SATScore2Txtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="GPALbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="GPATxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
+                  <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="EmailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="EmailTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FirstNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FirstNameTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LastNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LastNameTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="DateOfBirthLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="BirthDateFtxf" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SAT1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SATScore1Txtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SAT2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SATScore2Txtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="GPALbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="GPATxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace pref="273" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="FirstMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="FirstMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -221,9 +231,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="WhenInternationalPnl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -420,19 +428,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="IeltsScoreLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="IeltsTxtfl" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="ToefScoreLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="ToeflTxtfl" min="-2" pref="172" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="IeltsScoreLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ToefScoreLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="IeltsTxtfl" pref="171" max="32767" attributes="0"/>
+                          <Component id="ToeflTxtfl" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="79" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
