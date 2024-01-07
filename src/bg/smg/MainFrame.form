@@ -114,7 +114,7 @@
                                           <Component id="EmailTxtfl" alignment="0" max="32767" attributes="0"/>
                                           <Component id="FirstNameTxtfl" alignment="0" max="32767" attributes="0"/>
                                           <Component id="LastNameTxtfl" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
-                                          <Component id="BirthDateFtxf" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                                          <Component id="BirthDateFtxf" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -180,16 +180,13 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="DateOfBirthLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="DateOfBirthLbl" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                              <Component id="BirthDateFtxf" pref="22" max="32767" attributes="0"/>
+                              <Component id="BirthDateFtxf" min="-2" pref="16" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="SATLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="SATScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
