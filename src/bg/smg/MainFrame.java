@@ -6,6 +6,7 @@ package bg.smg;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -97,11 +98,22 @@ public class MainFrame extends javax.swing.JFrame {
         DateOfBirthLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DateOfBirthLbl.setText("Date of birth:");
 
-        BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        BirthDateFtxf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BirthDateFtxfActionPerformed(evt);
+            }
+        });
 
         SAT1Lbl.setText("SAT score:");
 
         SATScore1Txtfl.setText("Enter SAT score");
+        SATScore1Txtfl.setToolTipText("");
+        SATScore1Txtfl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SATScore1TxtflActionPerformed(evt);
+            }
+        });
 
         SAT2Lbl.setText("ACT score");
 
@@ -417,10 +429,23 @@ public class MainFrame extends javax.swing.JFrame {
         s.setEmail(EmailTxtfl.getText());
         s.setFirstName(FirstNameTxtfl.getText());
         s.setLastName(LastNameTxtfl.getText());
-        s.setBirthDate((LocalDate)BirthDateFtxf.getValue());
+        s.setBirthDate((Date)BirthDateFtxf.getValue());
        appl.setStudent(s);
-       appl.setACT(ABORT);
-       
+       appl.setACT(Integer.parseInt(SATScore2Txtfl.getText()));
+       appl.setSAT(Integer.parseInt(SATScore1Txtfl.getText()));
+       appl.setGPA(Double.parseDouble(GPATxtfl.getText()));
+       List<String>majors=new ArrayList();
+       String m1=FirstMajorComboBox.getSelectedItem().toString();
+       majors.add(m1);
+       String m2=SecondMajorComboBox.getSelectedItem().toString();
+       majors.add(m2);
+       String m3=ThirdMajorComboBox.getSelectedItem().toString();
+       majors.add(m3);
+       appl.setListMajors(majors);
+       applications.add(appl);
+  
+               
+      
     }//GEN-LAST:event_SaveBtnActionPerformed
 
     private void FirstMajorComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBoxActionPerformed
@@ -439,6 +464,14 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setVisible(false);
         jPanel2.setVisible(true);
     }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void BirthDateFtxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BirthDateFtxfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BirthDateFtxfActionPerformed
+
+    private void SATScore1TxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SATScore1TxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SATScore1TxtflActionPerformed
 
     /**
      * @param args the command line arguments

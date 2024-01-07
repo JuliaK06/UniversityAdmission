@@ -4,7 +4,9 @@
  */
 package bg.smg;
 
-import java.time.LocalDate;
+import java.util.Date;
+
+
 
 /**
  *
@@ -14,7 +16,7 @@ public class Student {
 private String email;
 private String firstName;
 private String lastName;
-private LocalDate birthDate;
+private Date birthDate;
 
   public Student() {
         this.email="";
@@ -23,11 +25,16 @@ private LocalDate birthDate;
         this.birthDate=null;
     }
   
-    public Student(String email, String firstName, String lastName, LocalDate birthdate) {
+    public Student(String email, String firstName, String lastName, Date birthdate) {
         this.email=email;
         this.firstName=firstName;
         this.lastName=lastName;
         this.birthDate=birthdate;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", birthDate=" + birthDate + '}';
     }
   
 
@@ -55,11 +62,11 @@ private LocalDate birthDate;
         this.lastName = lastName;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
     

@@ -33,6 +33,11 @@ public class Application {
   this.GPA=GPA;
   
    }
+
+    @Override
+    public String toString() {
+        return "Application{" + "student=" + student + ", majors=" + majors + ", GPA=" + GPA + ", SAT=" + SAT + ", ACT=" + ACT + '}';
+    }
    
    public Student getStudent(){
    return this.student;
