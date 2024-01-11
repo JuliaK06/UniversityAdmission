@@ -67,7 +67,6 @@ public class MainFrame extends javax.swing.JFrame {
         NoRBtn = new javax.swing.JRadioButton();
         SaveBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -345,23 +344,15 @@ public class MainFrame extends javax.swing.JFrame {
 
         YesRBtn.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel1.setText("jLabel1");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(jLabel1)
-                .addContainerGap(227, Short.MAX_VALUE))
+            .addGap(0, 445, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(214, 214, 214)
-                .addComponent(jLabel1)
-                .addContainerGap(339, Short.MAX_VALUE))
+            .addGap(0, 570, Short.MAX_VALUE)
         );
 
         jMenu1.setText("New");
@@ -453,7 +444,7 @@ public class MainFrame extends javax.swing.JFrame {
         majors.add(m3);
         appl.setListMajors(majors);
         applications.add(appl);
-        System.out.println(appl.toString());
+        System.out.println(applications.toString());
         
         FirstMajorComboBox.setSelectedIndex(0);
         SecondMajorComboBox.setSelectedIndex(0);
@@ -484,6 +475,15 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel1.setVisible(false);
         jPanel2.setVisible(true);
+        int i=0;
+         for(Application a: applications){
+            ApplicationPanel AppPan= new ApplicationPanel(a);
+            AppPan.setBounds(20 , (i*130+20), 445, 130);
+          
+             jPanel2.add(AppPan);
+             AppPan.setVisible(true);
+             i++;
+         }
     }//GEN-LAST:event_jMenu2MouseClicked
 
     private void BirthDateFtxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BirthDateFtxfActionPerformed
@@ -564,7 +564,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField ToeflTxtfl;
     private javax.swing.JPanel WhenInternationalPnl;
     private javax.swing.JRadioButton YesRBtn;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
