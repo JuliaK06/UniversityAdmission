@@ -126,7 +126,8 @@ List<Application> applications;
     }// </editor-fold>//GEN-END:initComponents
 
     private void RedactBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedactBtnActionPerformed
-        // TODO add your handling code here:
+       
+        
     }//GEN-LAST:event_RedactBtnActionPerformed
 
     private void DetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DetailsBtnActionPerformed
