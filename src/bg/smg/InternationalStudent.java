@@ -36,9 +36,13 @@ public class InternationalStudent extends Student{
         this.TOEFlscore = TOEFlscore;
         this.IELTSscore = IELTSscore;
     }
+
+    @Override
+    public String toString() {
+        return "InternationalStudent{" + super.toString()+ "TOEFlscore=" + TOEFlscore + ", IELTSscore=" + IELTSscore + '}';
+    }
  
   
-
    
 
     public int getTOEFlscore() {
