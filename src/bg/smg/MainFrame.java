@@ -8,7 +8,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import javax.accessibility.AccessibleContext;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -18,7 +17,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JRootPane;
+
 import javax.swing.JTextField;
 
 /**
@@ -36,6 +35,7 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         applications = new ArrayList();
         WhenInternationalPnl.setVisible(false);
+       
     }
 
     /**
@@ -375,7 +375,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Sort");
+        jMenu2.setText("View");
         jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu2MouseClicked(evt);
@@ -472,7 +472,9 @@ public class MainFrame extends javax.swing.JFrame {
         IeltsTxtfl.setText("Score");
         ToeflTxtfl.setText("Score");
 IfInternationalStudentButtonGroup.clearSelection();
-
+ ACTScoreTxtfl.setSize(108, 23);
+SATScoreTxtfl.setSize(108, 23);
+GPATxtfl.setSize(108, 23);
     }//GEN-LAST:event_SaveBtnActionPerformed
 
   
@@ -551,6 +553,7 @@ IfInternationalStudentButtonGroup.clearSelection();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainFrame().setVisible(true);
+                
             }
         });
     }
