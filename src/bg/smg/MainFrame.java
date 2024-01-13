@@ -8,6 +8,18 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.accessibility.AccessibleContext;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JRootPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -420,6 +432,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_YesRBtnActionPerformed
 
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
+
         Application appl = new Application();
         Student s = new Student();
         if (YesRBtn.isSelected()) {
@@ -427,6 +440,7 @@ public class MainFrame extends javax.swing.JFrame {
             ((InternationalStudent) s).setTOEFlscore(Integer.parseInt(ToeflTxtfl.getText()));
             ((InternationalStudent) s).setIELTSscore(Double.parseDouble(IeltsTxtfl.getText()));
         }
+    
         s.setEmail(EmailTxtfl.getText());
         s.setFirstName(FirstNameTxtfl.getText());
         s.setLastName(LastNameTxtfl.getText());
@@ -457,9 +471,11 @@ public class MainFrame extends javax.swing.JFrame {
         LastNameTxtfl.setText("");
         IeltsTxtfl.setText("Score");
         ToeflTxtfl.setText("Score");
+IfInternationalStudentButtonGroup.clearSelection();
 
     }//GEN-LAST:event_SaveBtnActionPerformed
 
+  
     private void FirstMajorComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FirstMajorComboBoxActionPerformed
@@ -469,22 +485,28 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setVisible(true);
         jPanel2.setVisible(false);
     }//GEN-LAST:event_jMenu1MouseClicked
-
+ 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
 
         jPanel1.setVisible(false);
         jPanel2.setVisible(true);
         int i=0;
+        
          for(Application a: applications){
             ApplicationPanel AppPan= new ApplicationPanel(a);
             AppPan.setBounds(20 , (i*130+20), 445, 130);
-          
+         
              jPanel2.add(AppPan);
+             AppPan.main=this;
+             AppPan.a=a;
+             
              AppPan.setVisible(true);
              i++;
          }
+          
     }//GEN-LAST:event_jMenu2MouseClicked
+
 
     private void BirthDateFtxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BirthDateFtxfActionPerformed
         // TODO add your handling code here:
@@ -533,6 +555,222 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
 
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JButton getSaveBtn() {
+        return SaveBtn;
+    }
+
+    public List<Application> getApplications() {
+        return applications;
+    }
+
+ 
+
+    public JLabel getACTLbl() {
+        return ACTLbl;
+    }
+
+    
+
+    public JFormattedTextField getACTScoreTxtfl() {
+        return ACTScoreTxtfl;
+    }
+
+
+    public JFormattedTextField getBirthDateFtxf() {
+        return BirthDateFtxf;
+    }
+
+    
+
+    public JLabel getDateOfBirthLbl() {
+        return DateOfBirthLbl;
+    }
+
+
+    public JLabel getEmailLbl() {
+        return EmailLbl;
+    }
+
+    
+
+    public JTextField getEmailTxtfl() {
+        return EmailTxtfl;
+    }
+
+    
+
+    public JComboBox<String> getFirstMajorComboBox() {
+        return FirstMajorComboBox;
+    }
+
+
+
+    public JLabel getFirstMajorLbl() {
+        return FirstMajorLbl;
+    }
+
+
+    public JLabel getFirstNameLbl() {
+        return FirstNameLbl;
+    }
+
+
+    public JTextField getFirstNameTxtfl() {
+        return FirstNameTxtfl;
+    }
+
+   
+
+    public JLabel getGPALbl() {
+        return GPALbl;
+    }
+
+  
+
+    public JFormattedTextField getGPATxtfl() {
+        return GPATxtfl;
+    }
+
+  
+
+    public JLabel getIeltsScoreLbl() {
+        return IeltsScoreLbl;
+    }
+
+  
+
+    public JTextField getIeltsTxtfl() {
+        return IeltsTxtfl;
+    }
+
+   
+
+    public ButtonGroup getIfInternationalStudentButtonGroup() {
+        return IfInternationalStudentButtonGroup;
+    }
+
+   
+
+    public JLabel getIsInternstionalLbl() {
+        return IsInternstionalLbl;
+    }
+
+  
+
+    public JLabel getLastNameLbl() {
+        return LastNameLbl;
+    }
+
+  
+
+    public JTextField getLastNameTxtfl() {
+        return LastNameTxtfl;
+    }
+
+    
+
+    public JRadioButton getNoRBtn() {
+        return NoRBtn;
+    }
+
+
+
+    public JLabel getSATLbl() {
+        return SATLbl;
+    }
+
+
+    public JFormattedTextField getSATScoreTxtfl() {
+        return SATScoreTxtfl;
+    }
+
+ 
+
+    public JComboBox<String> getSecondMajorComboBox() {
+        return SecondMajorComboBox;
+    }
+
+
+    public JLabel getSecondMajorLbl() {
+        return SecondMajorLbl;
+    }
+
+
+    public JComboBox<String> getThirdMajorComboBox() {
+        return ThirdMajorComboBox;
+    }
+
+
+
+    public JLabel getThirdMajorLbl() {
+        return ThirdMajorLbl;
+    }
+
+  
+
+    public JLabel getToefScoreLbl() {
+        return ToefScoreLbl;
+    }
+
+  
+
+    public JTextField getToeflTxtfl() {
+        return ToeflTxtfl;
+    }
+
+    
+
+    public JPanel getWhenInternationalPnl() {
+        return WhenInternationalPnl;
+    }
+
+    
+
+    public JRadioButton getYesRBtn() {
+        return YesRBtn;
+    }
+
+   
+
+    public JMenu getjMenu1() {
+        return jMenu1;
+    }
+
+    public void setjMenu1(JMenu jMenu1) {
+        this.jMenu1 = jMenu1;
+    }
+
+    public JMenu getjMenu2() {
+        return jMenu2;
+    }
+
+   
+
+    public JMenuBar getjMenuBar1() {
+        return jMenuBar1;
+    }
+
+  
+
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ACTLbl;
     private javax.swing.JFormattedTextField ACTScoreTxtfl;
@@ -570,4 +808,5 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
 }

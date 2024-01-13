@@ -11,8 +11,10 @@ import java.util.List;
  * @author A
  */
 public class ApplicationPanel extends javax.swing.JPanel {
+Application a;
 
-List<Application> applications;
+MainFrame main;
+
     /**
      * Creates new form ApplicationPanel
      */
@@ -27,6 +29,7 @@ List<Application> applications;
         GPATxtfl.setEditable(false);
         
     }
+ 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -126,16 +129,46 @@ List<Application> applications;
     }// </editor-fold>//GEN-END:initComponents
 
     private void RedactBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedactBtnActionPerformed
-       
-        
+       (main.getjPanel1()).setVisible(true);
+        main.getjPanel2().setVisible(false); 
+        main.getACTScoreTxtfl().setText(Integer.toString(a.getACT()));
+        main.getSATScoreTxtfl().setText(Integer.toString(a.getSAT()));
+        main.getGPATxtfl().setText(Double.toString(a.getGPA()));
+        main.getFirstNameTxtfl().setText(a.getStudent().getFirstName());
+        main.getLastNameTxtfl().setText(a.getStudent().getLastName());
+        main.getEmailTxtfl().setText(a.getStudent().getEmail());
+        main.getBirthDateFtxf().setText(a.getStudent().getBirthDate().toString());
+        main.getFirstMajorComboBox().setSelectedItem(a.getListMajors().get(0));
+        main.getSecondMajorComboBox().setSelectedItem(a.getListMajors().get(1));
+        main.getThirdMajorComboBox().setSelectedItem(a.getListMajors().get(2));
+        if(a.getStudent() instanceof InternationalStudent){
+          main.getWhenInternationalPnl().setVisible(true);
+          main.getYesRBtn().setSelected(true);
+          main.getToeflTxtfl().setText(Integer.toString(((InternationalStudent)a.getStudent()).getTOEFlscore()));
+          main.getIeltsTxtfl().setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
+          }
+        else {main.getNoRBtn().setSelected(true);}
+         
+        for(int i=0;i<main.applications.size();i++){
+        if(main.applications.get(i).equals(a)){
+            main.applications.remove(i);
+        }
+    }
+    this.setVisible(false);
     }//GEN-LAST:event_RedactBtnActionPerformed
 
     private void DetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DetailsBtnActionPerformed
+       ( new DetailedView(a)).setVisible(true);  
         
     }//GEN-LAST:event_DetailsBtnActionPerformed
 
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
-         
+    for(int i=0;i<main.applications.size();i++){
+        if(main.applications.get(i).equals(a)){
+            main.applications.remove(i);
+        }
+    }
+    this.setVisible(false);
     }//GEN-LAST:event_DeleteBtnActionPerformed
 
 

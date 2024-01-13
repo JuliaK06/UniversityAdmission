@@ -13,7 +13,7 @@ public class DetailedView extends javax.swing.JFrame {
     /**
      * Creates new form DetailedView
      */
-    public DetailedView() {
+    public DetailedView(Application a) {
         initComponents();
     }
 
@@ -130,7 +130,7 @@ public class DetailedView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DetailedView().setVisible(true);
+                
             }
         });
     }
