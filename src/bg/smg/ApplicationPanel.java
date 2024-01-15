@@ -5,20 +5,20 @@
 package bg.smg;
 
 import java.util.List;
+import javax.swing.JFrame;
 
 /**
  *
  * @author A
  */
 public class ApplicationPanel extends javax.swing.JPanel {
-Application a;
-
-MainFrame main;
+    
+    Application a;
 
     /**
      * Creates new form ApplicationPanel
      */
-    public ApplicationPanel(Application a) {
+    public ApplicationPanel(JFrame parent, Application a) {
         
         initComponents();
         FNameTxtf.setText(a.getStudent().getFirstName()); 
@@ -132,7 +132,11 @@ MainFrame main;
     }// </editor-fold>//GEN-END:initComponents
 
     private void RedactBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedactBtnActionPerformed
-       (main.getjPanel1()).setVisible(true);
+       
+        m
+        
+        
+        (main.getjPanel1()).setVisible(true);
         main.getjPanel2().setVisible(false); 
         main.getACTScoreTxtfl().setText(Integer.toString(a.getACT()));
         main.getSATScoreTxtfl().setText(Integer.toString(a.getSAT()));

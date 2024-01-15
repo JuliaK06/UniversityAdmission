@@ -28,6 +28,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     List<Application> applications;
 
+    Application currentApp;
     /**
      * Creates new form MainFrame
      */
@@ -431,6 +432,7 @@ public class MainFrame extends javax.swing.JFrame {
         WhenInternationalPnl.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_YesRBtnActionPerformed
 
+    
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
 
         Application appl = new Application();
@@ -496,7 +498,7 @@ GPATxtfl.setSize(108, 23);
         int i=0;
         
          for(Application a: applications){
-            ApplicationPanel AppPan= new ApplicationPanel(a);
+            ApplicationPanel AppPan= new ApplicationPanel(jPanel2, a);
             AppPan.setBounds(20 , (i*130+20), 445, 130);
          
              jPanel2.add(AppPan);

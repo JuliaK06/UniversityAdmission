@@ -16,16 +16,27 @@ public class DetailedView extends javax.swing.JFrame {
     public DetailedView(Application a) {
         initComponents();
         FirstNameTxtfl.setText(a.getStudent().getFirstName());
+        FirstNameTxtfl.setEditable(false);
         LastNameTxtfl.setText(a.getStudent().getLastName());
+        LastNameTxtfl.setEditable(false);
         EmailTxtfl.setText(a.getStudent().getEmail());
+        EmailTxtfl.setEditable(false);
         BirtdateTxtfl.setText(a.getStudent().getBirthDate().toString());
+        BirtdateTxtfl.setEditable(false);
         SATTxtfl.setText(Integer.toString(a.getSAT()));
+        SATTxtfl.setEditable(false);
         ACTTxtfl.setText(Integer.toString(a.getACT()));
+        ACTTxtfl.setEditable(false);
+        
         GPATxtfl.setText(Double.toString(a.getGPA()));
+        GPATxtfl.setEditable(false);
         if(a.getStudent() instanceof InternationalStudent){
             YesRbtn.setSelected(true);
+            
         }
         else {NoRbtn.setSelected(true);}
+        NoRbtn.setSelected(false);
+        YesRbtn.setEnabled(false);
     }
 
     /**
@@ -102,18 +113,18 @@ public class DetailedView extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Third major:");
 
-        FirstNameTxtfl.setText("jTextField1");
+        FirstNameTxtfl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FirstNameTxtflActionPerformed(evt);
+            }
+        });
 
-        LastNameTxtfl.setText("jTextField2");
         LastNameTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LastNameTxtflActionPerformed(evt);
             }
         });
 
-        BirtdateTxtfl.setText("jTextField3");
-
-        EmailTxtfl.setText("jTextField4");
         EmailTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmailTxtflActionPerformed(evt);
@@ -126,8 +137,7 @@ public class DetailedView extends javax.swing.JFrame {
 
         GPATxtfl.setText("jTextField7");
 
-        FirstMajorComboBox1.setModel(a.getListMajors().get(0).toString()
-        );
+        FirstMajorComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item1" }));
         FirstMajorComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FirstMajorComboBox1ActionPerformed(evt);
@@ -257,7 +267,7 @@ public class DetailedView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel12))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -282,6 +292,10 @@ public class DetailedView extends javax.swing.JFrame {
     private void FirstMajorComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FirstMajorComboBox1ActionPerformed
+
+    private void FirstNameTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FirstNameTxtflActionPerformed
 
     /**
      * @param args the command line arguments
