@@ -502,7 +502,7 @@ GPATxtfl.setSize(108, 23);
             AppPan.setBounds(20 , (i*130+20), 445, 130);
          
              jPanel2.add(AppPan);
-             AppPan.main=this;
+             
              AppPan.a=a;
              
              AppPan.setVisible(true);
@@ -559,222 +559,36 @@ GPATxtfl.setSize(108, 23);
             }
         });
     }
-
-    public JPanel getjPanel1() {
-        return jPanel1;
+    public void edit(Application a){
+        jPanel1.setVisible(true);
+        jPanel2.setVisible(false); 
+        ACTScoreTxtfl.setText(Integer.toString(a.getACT()));
+        SATScoreTxtfl.setText(Integer.toString(a.getSAT()));
+        GPATxtfl.setText(Double.toString(a.getGPA()));
+        FirstNameTxtfl.setText(a.getStudent().getFirstName());
+        LastNameTxtfl.setText(a.getStudent().getLastName());
+        EmailTxtfl.setText(a.getStudent().getEmail());
+       BirthDateFtxf.setText(a.getStudent().getBirthDate().toString());
+        FirstMajorComboBox.setSelectedItem(a.getListMajors().get(0));
+        SecondMajorComboBox.setSelectedItem(a.getListMajors().get(1));
+        ThirdMajorComboBox.setSelectedItem(a.getListMajors().get(2));
+        if(a.getStudent() instanceof InternationalStudent){
+          WhenInternationalPnl.setVisible(true);
+          YesRBtn.setSelected(true);
+          ToeflTxtfl.setText(Integer.toString(((InternationalStudent)a.getStudent()).getTOEFlscore()));
+          IeltsTxtfl.setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
+          }
+        else {NoRBtn.setSelected(true);}
+         
+       this.delete(a);
     }
-
-    public void setjPanel1(JPanel jPanel1) {
-        this.jPanel1 = jPanel1;
+    public void delete(Application a){
+     for(int i=0;i<this.applications.size();i++){
+        if(this.applications.get(i).equals(a)){
+            this.applications.remove(i);
+        }
     }
-
-    public JPanel getjPanel2() {
-        return jPanel2;
-    }
-
-    public void setjPanel2(JPanel jPanel2) {
-        this.jPanel2 = jPanel2;
-    }
-
-    public JButton getSaveBtn() {
-        return SaveBtn;
-    }
-
-    public List<Application> getApplications() {
-        return applications;
-    }
-
- 
-
-    public JLabel getACTLbl() {
-        return ACTLbl;
-    }
-
-    
-
-    public JFormattedTextField getACTScoreTxtfl() {
-        return ACTScoreTxtfl;
-    }
-
-
-    public JFormattedTextField getBirthDateFtxf() {
-        return BirthDateFtxf;
-    }
-
-    
-
-    public JLabel getDateOfBirthLbl() {
-        return DateOfBirthLbl;
-    }
-
-
-    public JLabel getEmailLbl() {
-        return EmailLbl;
-    }
-
-    
-
-    public JTextField getEmailTxtfl() {
-        return EmailTxtfl;
-    }
-
-    
-
-    public JComboBox<String> getFirstMajorComboBox() {
-        return FirstMajorComboBox;
-    }
-
-
-
-    public JLabel getFirstMajorLbl() {
-        return FirstMajorLbl;
-    }
-
-
-    public JLabel getFirstNameLbl() {
-        return FirstNameLbl;
-    }
-
-
-    public JTextField getFirstNameTxtfl() {
-        return FirstNameTxtfl;
-    }
-
-   
-
-    public JLabel getGPALbl() {
-        return GPALbl;
-    }
-
-  
-
-    public JFormattedTextField getGPATxtfl() {
-        return GPATxtfl;
-    }
-
-  
-
-    public JLabel getIeltsScoreLbl() {
-        return IeltsScoreLbl;
-    }
-
-  
-
-    public JTextField getIeltsTxtfl() {
-        return IeltsTxtfl;
-    }
-
-   
-
-    public ButtonGroup getIfInternationalStudentButtonGroup() {
-        return IfInternationalStudentButtonGroup;
-    }
-
-   
-
-    public JLabel getIsInternstionalLbl() {
-        return IsInternstionalLbl;
-    }
-
-  
-
-    public JLabel getLastNameLbl() {
-        return LastNameLbl;
-    }
-
-  
-
-    public JTextField getLastNameTxtfl() {
-        return LastNameTxtfl;
-    }
-
-    
-
-    public JRadioButton getNoRBtn() {
-        return NoRBtn;
-    }
-
-
-
-    public JLabel getSATLbl() {
-        return SATLbl;
-    }
-
-
-    public JFormattedTextField getSATScoreTxtfl() {
-        return SATScoreTxtfl;
-    }
-
- 
-
-    public JComboBox<String> getSecondMajorComboBox() {
-        return SecondMajorComboBox;
-    }
-
-
-    public JLabel getSecondMajorLbl() {
-        return SecondMajorLbl;
-    }
-
-
-    public JComboBox<String> getThirdMajorComboBox() {
-        return ThirdMajorComboBox;
-    }
-
-
-
-    public JLabel getThirdMajorLbl() {
-        return ThirdMajorLbl;
-    }
-
-  
-
-    public JLabel getToefScoreLbl() {
-        return ToefScoreLbl;
-    }
-
-  
-
-    public JTextField getToeflTxtfl() {
-        return ToeflTxtfl;
-    }
-
-    
-
-    public JPanel getWhenInternationalPnl() {
-        return WhenInternationalPnl;
-    }
-
-    
-
-    public JRadioButton getYesRBtn() {
-        return YesRBtn;
-    }
-
-   
-
-    public JMenu getjMenu1() {
-        return jMenu1;
-    }
-
-    public void setjMenu1(JMenu jMenu1) {
-        this.jMenu1 = jMenu1;
-    }
-
-    public JMenu getjMenu2() {
-        return jMenu2;
-    }
-
-   
-
-    public JMenuBar getjMenuBar1() {
-        return jMenuBar1;
-    }
-
-  
-
-    
-    
+    this.setVisible(false);}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ACTLbl;
