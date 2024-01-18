@@ -5,7 +5,8 @@
 package bg.smg;
 
 
-import java.util.Date;
+
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -31,7 +32,7 @@ public class InternationalStudent extends Student{
         this.IELTSscore = IELTSscore;
     }
 
-    public InternationalStudent(int TOEFlscore, double IELTSscore, String email, String firstName, String lastName, Date birthdate) {
+    public InternationalStudent(int TOEFlscore, double IELTSscore, String email, String firstName, String lastName, SimpleDateFormat birthdate) {
         super(email, firstName, lastName, birthdate);
         this.TOEFlscore = TOEFlscore;
         this.IELTSscore = IELTSscore;

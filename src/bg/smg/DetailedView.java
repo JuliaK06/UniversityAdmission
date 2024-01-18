@@ -4,17 +4,22 @@
  */
 package bg.smg;
 
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author A
  */
 public class DetailedView extends javax.swing.JFrame {
- Application a;
+ private Application a;
+
     /**
      * Creates new form DetailedView
      */
     public DetailedView(Application a) {
         initComponents();
+       
         FirstNameTxtfl.setText(a.getStudent().getFirstName());
         FirstNameTxtfl.setEditable(false);
         LastNameTxtfl.setText(a.getStudent().getLastName());
@@ -27,7 +32,7 @@ public class DetailedView extends javax.swing.JFrame {
         SATTxtfl.setEditable(false);
         ACTTxtfl.setText(Integer.toString(a.getACT()));
         ACTTxtfl.setEditable(false);
-        
+      
         GPATxtfl.setText(Double.toString(a.getGPA()));
         GPATxtfl.setEditable(false);
         if(a.getStudent() instanceof InternationalStudent){
@@ -35,7 +40,7 @@ public class DetailedView extends javax.swing.JFrame {
             
         }
         else {NoRbtn.setSelected(true);}
-        NoRbtn.setSelected(false);
+        NoRbtn.setEnabled(false);
         YesRbtn.setEnabled(false);
     }
 
@@ -70,9 +75,6 @@ public class DetailedView extends javax.swing.JFrame {
         SATTxtfl = new javax.swing.JTextField();
         ACTTxtfl = new javax.swing.JTextField();
         GPATxtfl = new javax.swing.JTextField();
-        FirstMajorComboBox1 = new javax.swing.JComboBox<>();
-        SecondMajorComboBox2 = new javax.swing.JComboBox<>();
-        ThirdMajorComboBox3 = new javax.swing.JComboBox<>();
         YesRbtn = new javax.swing.JRadioButton();
         NoRbtn = new javax.swing.JRadioButton();
 
@@ -137,17 +139,6 @@ public class DetailedView extends javax.swing.JFrame {
 
         GPATxtfl.setText("jTextField7");
 
-        FirstMajorComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item1" }));
-        FirstMajorComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FirstMajorComboBox1ActionPerformed(evt);
-            }
-        });
-
-        SecondMajorComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        ThirdMajorComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         YesRbtn.setText("Yes");
         YesRbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,17 +191,11 @@ public class DetailedView extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(SecondMajorComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(FirstMajorComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ThirdMajorComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(EmailTxtfl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                                         .addComponent(LastNameTxtfl, javax.swing.GroupLayout.Alignment.LEADING))
@@ -244,20 +229,17 @@ public class DetailedView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel13)
-                    .addComponent(SATTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FirstMajorComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SATTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel14)
-                    .addComponent(ACTTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SecondMajorComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ACTTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel15)
-                    .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ThirdMajorComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -288,10 +270,6 @@ public class DetailedView extends javax.swing.JFrame {
     private void EmailTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTxtflActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EmailTxtflActionPerformed
-
-    private void FirstMajorComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FirstMajorComboBox1ActionPerformed
 
     private void FirstNameTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTxtflActionPerformed
         // TODO add your handling code here:
@@ -336,14 +314,11 @@ public class DetailedView extends javax.swing.JFrame {
     private javax.swing.JTextField ACTTxtfl;
     private javax.swing.JTextField BirtdateTxtfl;
     private javax.swing.JTextField EmailTxtfl;
-    private javax.swing.JComboBox<String> FirstMajorComboBox1;
     private javax.swing.JTextField FirstNameTxtfl;
     private javax.swing.JTextField GPATxtfl;
     private javax.swing.JTextField LastNameTxtfl;
     private javax.swing.JRadioButton NoRbtn;
     private javax.swing.JTextField SATTxtfl;
-    private javax.swing.JComboBox<String> SecondMajorComboBox2;
-    private javax.swing.JComboBox<String> ThirdMajorComboBox3;
     private javax.swing.JRadioButton YesRbtn;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel10;

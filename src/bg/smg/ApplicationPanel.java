@@ -20,7 +20,7 @@ public class ApplicationPanel extends javax.swing.JPanel {
      * Creates new form ApplicationPanel
      * @param parent
      */
-    public ApplicationPanel(JPanel parent, Application a) {
+    public ApplicationPanel( Application a) {
         
         initComponents();
         FNameTxtf.setText(a.getStudent().getFirstName()); 
@@ -29,7 +29,6 @@ public class ApplicationPanel extends javax.swing.JPanel {
         LNameTxtfl.setEditable(false);
         GPATxtfl.setText(Double.toString(a.getGPA()));
         GPATxtfl.setEditable(false);
-        parent=new JPanel();
         
     }
  
@@ -135,11 +134,7 @@ public class ApplicationPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RedactBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedactBtnActionPerformed
-      edit(this.a);
-   
-        
-        
-        
+  
     }//GEN-LAST:event_RedactBtnActionPerformed
 
     private void DetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DetailsBtnActionPerformed

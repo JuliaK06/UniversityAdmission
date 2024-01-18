@@ -4,6 +4,8 @@
  */
 package bg.smg;
 
+
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -78,8 +80,9 @@ public class MainFrame extends javax.swing.JFrame {
         IeltsTxtfl = new javax.swing.JTextField();
         YesRBtn = new javax.swing.JRadioButton();
         NoRBtn = new javax.swing.JRadioButton();
-        SaveBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        SaveBtn = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -87,10 +90,10 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
 
-        EmailLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EmailLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         EmailLbl.setText("Email:");
 
-        FirstNameLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        FirstNameLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         FirstNameLbl.setText("First name:");
 
         FirstNameTxtfl.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +102,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        LastNameLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LastNameLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         LastNameLbl.setText("Last name:");
 
         LastNameTxtfl.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +111,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        DateOfBirthLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        DateOfBirthLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         DateOfBirthLbl.setText("Date of birth:");
 
         BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/yy"))));
@@ -118,9 +121,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        SATLbl.setText("SAT score:");
+        SATLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
+        SATLbl.setText("Enter SAT score:");
 
-        SATScoreTxtfl.setText("Enter SAT score");
         SATScoreTxtfl.setToolTipText("");
         SATScoreTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,9 +131,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        ACTLbl.setText("ACT score");
+        ACTLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
+        ACTLbl.setText("Enter ACT score:");
 
-        ACTScoreTxtfl.setText("Enter ACT score");
         ACTScoreTxtfl.setToolTipText("");
         ACTScoreTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,11 +141,16 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        GPALbl.setText("GPA:");
+        GPALbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
+        GPALbl.setText("Enter GPA :");
 
-        GPATxtfl.setText("Enter GPA");
+        GPATxtfl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GPATxtflActionPerformed(evt);
+            }
+        });
 
-        FirstMajorLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        FirstMajorLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         FirstMajorLbl.setText("1. Select first major");
 
         FirstMajorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Architecture", "Biology", "Business ", "Computer Science", "Engineering", "History", "Law", "Maths" }));
@@ -153,25 +161,32 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        SecondMajorLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        SecondMajorLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         SecondMajorLbl.setText("2. Select second major");
 
         SecondMajorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Architecture", "Biology", "Business ", "Computer Science", "Engineering", "History", "Law", "Maths" }));
 
-        ThirdMajorLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ThirdMajorLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         ThirdMajorLbl.setText("3. Select third major");
 
         ThirdMajorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Architecture", "Biology", "Business ", "Computer Science", "Engineering", "History", "Law", "Maths" }));
 
-        IsInternstionalLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        IsInternstionalLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         IsInternstionalLbl.setText("Are you an international student ?");
 
         WhenInternationalPnl.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
 
+        ToefScoreLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         ToefScoreLbl.setText("Enter Toefl score:");
 
         ToeflTxtfl.setText("Score");
+        ToeflTxtfl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ToeflTxtflActionPerformed(evt);
+            }
+        });
 
+        IeltsScoreLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         IeltsScoreLbl.setText("Enter IELTS score:");
 
         IeltsTxtfl.setText("Score");
@@ -187,16 +202,14 @@ public class MainFrame extends javax.swing.JFrame {
             WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WhenInternationalPnlLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addGroup(WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(WhenInternationalPnlLayout.createSequentialGroup()
-                        .addComponent(IeltsScoreLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(IeltsTxtfl))
-                    .addGroup(WhenInternationalPnlLayout.createSequentialGroup()
-                        .addComponent(ToefScoreLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(ToeflTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(IeltsScoreLbl)
+                    .addComponent(ToefScoreLbl))
+                .addGap(18, 18, 18)
+                .addGroup(WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ToeflTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IeltsTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         WhenInternationalPnlLayout.setVerticalGroup(
             WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,79 +241,71 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        SaveBtn.setText("Save");
-        SaveBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SaveBtnActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(WhenInternationalPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DateOfBirthLbl)
-                    .addComponent(EmailLbl)
-                    .addComponent(FirstNameLbl)
-                    .addComponent(LastNameLbl))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(EmailTxtfl)
-                    .addComponent(FirstNameTxtfl)
-                    .addComponent(LastNameTxtfl)
-                    .addComponent(BirthDateFtxf, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(74, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SATLbl)
+                            .addComponent(ACTLbl)
+                            .addComponent(GPALbl))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(GPATxtfl, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                            .addComponent(ACTScoreTxtfl)
+                            .addComponent(SATScoreTxtfl, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(FirstMajorLbl)
+                        .addGap(39, 39, 39)
+                        .addComponent(FirstMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(34, 34, 34)
+                            .addComponent(ThirdMajorLbl)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ThirdMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(SecondMajorLbl)
+                            .addGap(18, 18, 18)
+                            .addComponent(SecondMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(IsInternstionalLbl)
+                        .addGap(18, 18, 18)
+                        .addComponent(YesRBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(NoRBtn))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(IsInternstionalLbl)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(YesRBtn)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(NoRBtn))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(FirstMajorLbl)
-                                    .addGap(39, 39, 39)
-                                    .addComponent(FirstMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(ThirdMajorLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ThirdMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(SecondMajorLbl)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(SecondMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(SATLbl)
-                                        .addComponent(ACTLbl)
-                                        .addComponent(GPALbl))
-                                    .addGap(39, 39, 39)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(ACTScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(SATScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addContainerGap(41, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(SaveBtn)
-                            .addGap(159, 159, 159))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(WhenInternationalPnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addContainerGap()))))
+                                .addComponent(DateOfBirthLbl)
+                                .addComponent(EmailLbl)
+                                .addComponent(FirstNameLbl)
+                                .addComponent(LastNameLbl))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(43, 43, 43)))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(EmailTxtfl)
+                            .addComponent(FirstNameTxtfl)
+                            .addComponent(LastNameTxtfl)
+                            .addComponent(BirthDateFtxf, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailLbl)
                     .addComponent(EmailTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -316,56 +321,64 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BirthDateFtxf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DateOfBirthLbl))
-                .addContainerGap(404, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(164, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(SATLbl)
-                        .addComponent(SATScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ACTLbl)
-                        .addComponent(ACTScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(GPALbl)
-                        .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(31, 31, 31)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(FirstMajorLbl)
-                        .addComponent(FirstMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(SecondMajorLbl)
-                        .addComponent(SecondMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ThirdMajorLbl)
-                        .addComponent(ThirdMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(IsInternstionalLbl)
-                        .addComponent(YesRBtn)
-                        .addComponent(NoRBtn))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(WhenInternationalPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addComponent(SaveBtn)
-                    .addContainerGap()))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SATLbl)
+                    .addComponent(SATScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ACTLbl)
+                    .addComponent(ACTScoreTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GPALbl)
+                    .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FirstMajorLbl)
+                    .addComponent(FirstMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SecondMajorLbl)
+                    .addComponent(SecondMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ThirdMajorLbl)
+                    .addComponent(ThirdMajorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IsInternstionalLbl)
+                    .addComponent(YesRBtn)
+                    .addComponent(NoRBtn))
+                .addGap(23, 23, 23)
+                .addComponent(WhenInternationalPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         YesRBtn.getAccessibleContext().setAccessibleDescription("");
+
+        SaveBtn.setText("Save");
+        SaveBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(200, Short.MAX_VALUE)
+                .addComponent(SaveBtn)
+                .addGap(194, 194, 194))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(565, Short.MAX_VALUE)
+                .addComponent(SaveBtn)
+                .addGap(29, 29, 29))
         );
 
         jMenu1.setText("New");
@@ -391,7 +404,7 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,7 +415,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -411,26 +424,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void NoRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoRBtnActionPerformed
-        WhenInternationalPnl.setVisible(false); // TODO add your handling code here:
-    }//GEN-LAST:event_NoRBtnActionPerformed
-
-    private void IeltsTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IeltsTxtflActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IeltsTxtflActionPerformed
-
-    private void FirstNameTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTxtflActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FirstNameTxtflActionPerformed
-
-    private void LastNameTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastNameTxtflActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LastNameTxtflActionPerformed
-
-    private void YesRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesRBtnActionPerformed
-        WhenInternationalPnl.setVisible(true);// TODO add your handling code here:
-    }//GEN-LAST:event_YesRBtnActionPerformed
 
     
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
@@ -443,10 +436,14 @@ public class MainFrame extends javax.swing.JFrame {
             ((InternationalStudent) s).setIELTSscore(Double.parseDouble(IeltsTxtfl.getText()));
         }
     
+    SimpleDateFormat format = new SimpleDateFormat(BirthDateFtxf.getText());
+   s.setBirthDate(format);
+   
+    
         s.setEmail(EmailTxtfl.getText());
         s.setFirstName(FirstNameTxtfl.getText());
         s.setLastName(LastNameTxtfl.getText());
-        s.setBirthDate((Date) BirthDateFtxf.getValue());
+       
         appl.setStudent(s);
         appl.setACT(Integer.parseInt(ACTScoreTxtfl.getText()));
         appl.setSAT(Integer.parseInt(SATScoreTxtfl.getText()));
@@ -480,10 +477,6 @@ GPATxtfl.setSize(108, 23);
     }//GEN-LAST:event_SaveBtnActionPerformed
 
   
-    private void FirstMajorComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FirstMajorComboBoxActionPerformed
-
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
         jPanel1.setVisible(true);
@@ -498,7 +491,7 @@ GPATxtfl.setSize(108, 23);
         int i=0;
         
          for(Application a: applications){
-            ApplicationPanel AppPan= new ApplicationPanel(jPanel2, a);
+            ApplicationPanel AppPan= new ApplicationPanel( a);
             AppPan.setBounds(20 , (i*130+20), 445, 130);
          
              jPanel2.add(AppPan);
@@ -511,18 +504,50 @@ GPATxtfl.setSize(108, 23);
           
     }//GEN-LAST:event_jMenu2MouseClicked
 
+    private void NoRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoRBtnActionPerformed
+        WhenInternationalPnl.setVisible(false); // TODO add your handling code here:
+    }//GEN-LAST:event_NoRBtnActionPerformed
 
-    private void BirthDateFtxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BirthDateFtxfActionPerformed
+    private void YesRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesRBtnActionPerformed
+        WhenInternationalPnl.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_YesRBtnActionPerformed
+
+    private void IeltsTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IeltsTxtflActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BirthDateFtxfActionPerformed
+    }//GEN-LAST:event_IeltsTxtflActionPerformed
+
+    private void ToeflTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToeflTxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ToeflTxtflActionPerformed
+
+    private void FirstMajorComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstMajorComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FirstMajorComboBoxActionPerformed
+
+    private void GPATxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GPATxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GPATxtflActionPerformed
+
+    private void ACTScoreTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ACTScoreTxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ACTScoreTxtflActionPerformed
 
     private void SATScoreTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SATScoreTxtflActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SATScoreTxtflActionPerformed
 
-    private void ACTScoreTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ACTScoreTxtflActionPerformed
+    private void BirthDateFtxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BirthDateFtxfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ACTScoreTxtflActionPerformed
+    }//GEN-LAST:event_BirthDateFtxfActionPerformed
+
+    private void LastNameTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastNameTxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LastNameTxtflActionPerformed
+
+    private void FirstNameTxtflActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTxtflActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FirstNameTxtflActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -621,6 +646,7 @@ GPATxtfl.setSize(108, 23);
     private javax.swing.JTextField ToeflTxtfl;
     private javax.swing.JPanel WhenInternationalPnl;
     private javax.swing.JRadioButton YesRBtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

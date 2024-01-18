@@ -52,7 +52,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="14" max="32767" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -66,7 +66,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="52" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -84,86 +84,81 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <Component id="WhenInternationalPnl" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="DateOfBirthLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="EmailLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="FirstNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="LastNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="EmailTxtfl" alignment="0" max="32767" attributes="0"/>
-                      <Component id="FirstNameTxtfl" alignment="0" max="32767" attributes="0"/>
-                      <Component id="LastNameTxtfl" alignment="0" max="32767" attributes="0"/>
-                      <Component id="BirthDateFtxf" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="74" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="IsInternstionalLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="YesRBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="NoRBtn" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="FirstMajorLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Component id="FirstMajorComboBox" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="ThirdMajorLbl" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="ThirdMajorComboBox" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="SecondMajorLbl" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="SecondMajorComboBox" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="SATLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ACTLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="GPALbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="GPATxtfl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ACTScoreTxtfl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="SATScoreTxtfl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="SATLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ACTLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="GPALbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="GPATxtfl" alignment="0" pref="144" max="32767" attributes="0"/>
+                              <Component id="ACTScoreTxtfl" alignment="0" max="32767" attributes="0"/>
+                              <Component id="SATScoreTxtfl" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="FirstMajorLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="FirstMajorComboBox" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="ThirdMajorLbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="ThirdMajorComboBox" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+                              <Component id="SecondMajorLbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="SecondMajorComboBox" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="WhenInternationalPnl" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="IsInternstionalLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="YesRBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="NoRBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="DateOfBirthLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmailLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="FirstNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LastNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="EmailTxtfl" alignment="0" max="32767" attributes="0"/>
+                              <Component id="FirstNameTxtfl" alignment="0" max="32767" attributes="0"/>
+                              <Component id="LastNameTxtfl" alignment="0" max="32767" attributes="0"/>
+                              <Component id="BirthDateFtxf" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="EmailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="EmailTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -183,52 +178,45 @@
                       <Component id="BirthDateFtxf" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DateOfBirthLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="404" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="164" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SATLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SATScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ACTLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ACTScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="GPALbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="GPATxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FirstMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FirstMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SecondMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SecondMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ThirdMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ThirdMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="IsInternstionalLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="YesRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="NoRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="WhenInternationalPnl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="SATLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SATScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ACTLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ACTScoreTxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="GPALbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="GPATxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="FirstMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="FirstMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="SecondMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SecondMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ThirdMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ThirdMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="IsInternstionalLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="YesRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NoRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="WhenInternationalPnl" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -237,7 +225,7 @@
         <Component class="javax.swing.JLabel" name="EmailLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
@@ -247,7 +235,7 @@
         <Component class="javax.swing.JLabel" name="FirstNameLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="First name:"/>
           </Properties>
@@ -260,7 +248,7 @@
         <Component class="javax.swing.JLabel" name="LastNameLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Last name:"/>
           </Properties>
@@ -273,7 +261,7 @@
         <Component class="javax.swing.JLabel" name="DateOfBirthLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Date of birth:"/>
           </Properties>
@@ -290,12 +278,14 @@
         </Component>
         <Component class="javax.swing.JLabel" name="SATLbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="SAT score:"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Muna" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Enter SAT score:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="SATScoreTxtfl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Enter SAT score"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
@@ -304,12 +294,14 @@
         </Component>
         <Component class="javax.swing.JLabel" name="ACTLbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ACT score"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Muna" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Enter ACT score:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="ACTScoreTxtfl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Enter ACT score"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
@@ -318,18 +310,21 @@
         </Component>
         <Component class="javax.swing.JLabel" name="GPALbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="GPA:"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Muna" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Enter GPA :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="GPATxtfl">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Enter GPA"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GPATxtflActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="FirstMajorLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1. Select first major"/>
           </Properties>
@@ -360,7 +355,7 @@
         <Component class="javax.swing.JLabel" name="SecondMajorLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2. Select second major"/>
           </Properties>
@@ -387,7 +382,7 @@
         <Component class="javax.swing.JLabel" name="ThirdMajorLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="3. Select third major"/>
           </Properties>
@@ -414,7 +409,7 @@
         <Component class="javax.swing.JLabel" name="IsInternstionalLbl">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Muna" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Are you an international student ?"/>
           </Properties>
@@ -435,19 +430,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="IeltsScoreLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="IeltsTxtfl" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="ToefScoreLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="ToeflTxtfl" min="-2" pref="172" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="IeltsScoreLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ToefScoreLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ToeflTxtfl" min="-2" pref="167" max="-2" attributes="0"/>
+                          <Component id="IeltsTxtfl" min="-2" pref="167" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="88" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -472,6 +464,9 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="ToefScoreLbl">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Muna" size="14" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Enter Toefl score:"/>
               </Properties>
             </Component>
@@ -479,9 +474,15 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Score"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ToeflTxtflActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="IeltsScoreLbl">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Muna" size="14" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Enter IELTS score:"/>
               </Properties>
             </Component>
@@ -520,6 +521,36 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NoRBtnActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="200" max="32767" attributes="0"/>
+                  <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="565" max="32767" attributes="0"/>
+                  <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
         <Component class="javax.swing.JButton" name="SaveBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Save"/>
@@ -529,21 +560,6 @@
           </Events>
         </Component>
       </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="jPanel2">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="445" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="570" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
     </Container>
   </SubComponents>
 </Form>

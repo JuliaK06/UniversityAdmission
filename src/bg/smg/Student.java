@@ -5,6 +5,7 @@
 package bg.smg;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -17,7 +18,8 @@ public class Student {
 private String email;
 private String firstName;
 private String lastName;
-private Date birthDate;
+private SimpleDateFormat birthDate;
+
 
   public Student() {
         this.email="";
@@ -26,7 +28,7 @@ private Date birthDate;
         this.birthDate=null;
     }
   
-    public Student(String email, String firstName, String lastName, Date birthdate) {
+    public Student(String email, String firstName, String lastName, SimpleDateFormat birthdate) {
         this.email=email;
         this.firstName=firstName;
         this.lastName=lastName;
@@ -63,11 +65,11 @@ private Date birthDate;
         this.lastName = lastName;
     }
 
-    public Date getBirthDate() {
+    public SimpleDateFormat getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(SimpleDateFormat birthDate) {
         this.birthDate = birthDate;
     }
     
