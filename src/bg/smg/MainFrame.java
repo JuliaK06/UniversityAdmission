@@ -608,16 +608,25 @@ GPATxtfl.setSize(108, 23);
           IeltsTxtfl.setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
           }
         else {NoRBtn.setSelected(true);}
-         
-       this.delete(a);
-    }
+       delete(a);
+       /* boolean shouldBeDeleted=true;
+         for(Application appl: applications){
+         if(appl.equals(a)){
+             shouldBeDeleted=false;
+         }
+        if(shouldBeDeleted){
+        delete(a);
+        }
+    }*/
+}
     public void delete(Application a){
      for(int i=0;i<this.applications.size();i++){
         if(this.applications.get(i).equals(a)){
             this.applications.remove(i);
         }
     }
-    this.setVisible(false);}
+   this.setVisible(false);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ACTLbl;
