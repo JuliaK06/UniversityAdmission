@@ -625,7 +625,7 @@ GPATxtfl.setSize(108, 23);
             this.applications.remove(i);
         }
     }
-   this.setVisible(false);
+   //this.setVisible(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
