@@ -5,8 +5,12 @@
 package bg.smg;
 
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,6 +25,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 import javax.swing.JTextField;
+import javax.swing.text.DateFormatter;
 
 /**
  *
@@ -435,11 +440,8 @@ public class MainFrame extends javax.swing.JFrame {
             ((InternationalStudent) s).setTOEFlscore(Integer.parseInt(ToeflTxtfl.getText()));
             ((InternationalStudent) s).setIELTSscore(Double.parseDouble(IeltsTxtfl.getText()));
         }
-    
-    SimpleDateFormat format = new SimpleDateFormat(BirthDateFtxf.getText());
-   s.setBirthDate(format);
-   
-    
+         Date date=(Date) BirthDateFtxf.getValue();
+    s.setBirthDate(Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDate());
         s.setEmail(EmailTxtfl.getText());
         s.setFirstName(FirstNameTxtfl.getText());
         s.setLastName(LastNameTxtfl.getText());
@@ -458,6 +460,7 @@ public class MainFrame extends javax.swing.JFrame {
         appl.setListMajors(majors);
         applications.add(appl);
         System.out.println(applications.toString());
+       
         
         FirstMajorComboBox.setSelectedIndex(0);
         SecondMajorComboBox.setSelectedIndex(0);
@@ -466,6 +469,7 @@ public class MainFrame extends javax.swing.JFrame {
         SATScoreTxtfl.setText("Enter ACT score");
         GPATxtfl.setText("Enter GPA score");
         EmailTxtfl.setText("");
+        BirthDateFtxf.setValue(null);
         FirstNameTxtfl.setText("");
         LastNameTxtfl.setText("");
         IeltsTxtfl.setText("Score");
@@ -476,7 +480,7 @@ SATScoreTxtfl.setSize(108, 23);
 GPATxtfl.setSize(108, 23);
     }//GEN-LAST:event_SaveBtnActionPerformed
 
-  
+
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
         jPanel1.setVisible(true);
