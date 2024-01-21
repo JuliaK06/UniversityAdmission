@@ -12,10 +12,11 @@ import javax.swing.JPanel;
  *
  * @author A
  */
-public class ApplicationPanel extends javax.swing.JPanel {
-    
-    Application a;
+public class ApplicationPanel extends javax.swing.JPanel{
 
+    
+   public  Application a;
+    
     /**
      * Creates new form ApplicationPanel
      * @param parent
@@ -133,6 +134,7 @@ public class ApplicationPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+  
     private void RedactBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedactBtnActionPerformed
   
     }//GEN-LAST:event_RedactBtnActionPerformed

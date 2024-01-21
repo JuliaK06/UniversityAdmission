@@ -41,6 +41,9 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+         ACTScoreTxtfl.setSize(108, 23);
+SATScoreTxtfl.setSize(108, 23);
+GPATxtfl.setSize(108, 23);
         applications = new ArrayList();
         WhenInternationalPnl.setVisible(false);
        
@@ -466,7 +469,7 @@ public class MainFrame extends javax.swing.JFrame {
         SecondMajorComboBox.setSelectedIndex(0);
         ThirdMajorComboBox.setSelectedIndex(0);
         ACTScoreTxtfl.setText("Enter ACT score");
-        SATScoreTxtfl.setText("Enter ACT score");
+        SATScoreTxtfl.setText("Enter SAT score");
         GPATxtfl.setText("Enter GPA score");
         EmailTxtfl.setText("");
         BirthDateFtxf.setValue(null);
@@ -475,9 +478,7 @@ public class MainFrame extends javax.swing.JFrame {
         IeltsTxtfl.setText("Score");
         ToeflTxtfl.setText("Score");
 IfInternationalStudentButtonGroup.clearSelection();
- ACTScoreTxtfl.setSize(108, 23);
-SATScoreTxtfl.setSize(108, 23);
-GPATxtfl.setSize(108, 23);
+
     }//GEN-LAST:event_SaveBtnActionPerformed
 
 
@@ -494,13 +495,13 @@ GPATxtfl.setSize(108, 23);
         jPanel2.setVisible(true);
         int i=0;
         
-         for(Application a: applications){
-            ApplicationPanel AppPan= new ApplicationPanel( a);
+         for(Application app: applications){
+            ApplicationPanel AppPan= new ApplicationPanel( app);
             AppPan.setBounds(20 , (i*130+20), 445, 130);
          
              jPanel2.add(AppPan);
              
-             AppPan.a=a;
+             AppPan.a=app;
              
              AppPan.setVisible(true);
              i++;
