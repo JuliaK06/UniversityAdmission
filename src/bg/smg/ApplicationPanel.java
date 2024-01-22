@@ -145,7 +145,7 @@ public class ApplicationPanel extends javax.swing.JPanel{
     }//GEN-LAST:event_DetailsBtnActionPerformed
 
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
-   
+   this.setVisible(false);
     }//GEN-LAST:event_DeleteBtnActionPerformed
 
 
