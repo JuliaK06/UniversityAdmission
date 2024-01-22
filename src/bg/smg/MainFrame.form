@@ -141,16 +141,17 @@
                               <Component id="FirstNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="LastNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="FirstNameTxtfl" pref="256" max="32767" attributes="0"/>
-                              <Component id="LastNameTxtfl" alignment="1" max="32767" attributes="0"/>
-                              <Component id="BirthDateFtxf" alignment="1" max="32767" attributes="0"/>
-                              <Component id="EmailTxtfl" max="32767" attributes="0"/>
+                          <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="LastNameTxtfl" alignment="0" pref="235" max="32767" attributes="0"/>
+                                  <Component id="FirstNameTxtfl" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="BirthDateFtxf" alignment="1" min="-2" pref="235" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -159,17 +160,21 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jSeparator1" min="-2" pref="393" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="WhenInternationalPnl" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="WhenInternationalPnl" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="EmailTxtfl" alignment="1" min="-2" pref="235" max="-2" attributes="0"/>
+                      <Component id="jSeparator1" alignment="1" min="-2" pref="393" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -215,7 +220,7 @@
                       <Component id="GPALbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="GPATxtfl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="118" max="32767" attributes="0"/>
+                  <EmptySpace pref="86" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="FirstMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="FirstMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -230,13 +235,13 @@
                       <Component id="ThirdMajorLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ThirdMajorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="IsInternstionalLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="YesRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="NoRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="WhenInternationalPnl" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="SaveBtn" min="-2" max="-2" attributes="0"/>
@@ -456,17 +461,17 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="IeltsScoreLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="ToefScoreLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ToeflTxtfl" min="-2" pref="167" max="-2" attributes="0"/>
-                          <Component id="IeltsTxtfl" min="-2" pref="167" max="-2" attributes="0"/>
+                          <Component id="IeltsTxtfl" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="ToeflTxtfl" min="-2" pref="141" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="152" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
