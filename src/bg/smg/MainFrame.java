@@ -5,8 +5,8 @@
 package bg.smg;
 
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+
+
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -35,7 +35,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     List<Application> applications;
 
-    Application currentApp;
+   
     /**
      * Creates new form MainFrame
      */
@@ -133,7 +133,7 @@ GPATxtfl.setSize(108, 23);
         DateOfBirthLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         DateOfBirthLbl.setText("Date of birth:");
 
-        BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/yy"))));
+        BirthDateFtxf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yy"))));
         BirthDateFtxf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BirthDateFtxfActionPerformed(evt);
@@ -458,7 +458,7 @@ GPATxtfl.setSize(108, 23);
     
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
 
-        Application appl = new Application();
+        Application appl = new Application();   
         Student s = new Student();
         if (YesRBtn.isSelected()) {
             s = new InternationalStudent();
@@ -483,22 +483,32 @@ GPATxtfl.setSize(108, 23);
         String m3 = ThirdMajorComboBox.getSelectedItem().toString();
         majors.add(m3);
         appl.setListMajors(majors);
-        applications.add(appl);
+        boolean shouldBeSaved=true;
+         for(Application app: applications){
+         if(app.equals(appl)){
+             shouldBeSaved=false;
+             break;
+         }}
+         if(shouldBeSaved){
+         applications.add(appl);
+         }
+        
+                
         System.out.println(applications.toString());
-       
         
         FirstMajorComboBox.setSelectedIndex(0);
         SecondMajorComboBox.setSelectedIndex(0);
         ThirdMajorComboBox.setSelectedIndex(0);
-        ACTScoreTxtfl.setText("Enter ACT score");
-        SATScoreTxtfl.setText("Enter SAT score");
-        GPATxtfl.setText("Enter GPA score");
         EmailTxtfl.setText("");
         BirthDateFtxf.setValue(null);
         FirstNameTxtfl.setText("");
         LastNameTxtfl.setText("");
-        IeltsTxtfl.setText("Score");
-        ToeflTxtfl.setText("Score");
+        SATScoreTxtfl.setText("");
+        ACTScoreTxtfl.setText("");
+        GPATxtfl.setText("");
+        ToeflTxtfl.setText("");
+        IeltsTxtfl.setText("");
+         
 IfInternationalStudentButtonGroup.clearSelection();
 WhenInternationalPnl.setVisible(false);
     }//GEN-LAST:event_SaveBtnActionPerformed
@@ -515,11 +525,16 @@ WhenInternationalPnl.setVisible(false);
 
         jPanel1.setVisible(false);
         jPanel2.setVisible(true);
-        int i=0;
+        generateAppPanels();
+        
+          
+    }//GEN-LAST:event_jMenu2MouseClicked
+private void generateAppPanels(){
+int i=0;
         
          for(Application app: applications){
-            ApplicationPanel AppPan= new ApplicationPanel( app);
-            AppPan.setBounds(20 , (i*130+20), 445, 130);
+            ApplicationPanel AppPan= new ApplicationPanel( this,app);
+            AppPan.setBounds(50, (i*130+20), 445, 130);
          
              jPanel2.add(AppPan);
              
@@ -527,10 +542,7 @@ WhenInternationalPnl.setVisible(false);
              
              AppPan.setVisible(true);
              i++;
-         }
-          
-    }//GEN-LAST:event_jMenu2MouseClicked
-
+         }}
     private void NoRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoRBtnActionPerformed
         WhenInternationalPnl.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_NoRBtnActionPerformed
@@ -616,6 +628,7 @@ WhenInternationalPnl.setVisible(false);
         });
     }
     public void edit(Application a){
+       
         jPanel1.setVisible(true);
         jPanel2.setVisible(false); 
         ACTScoreTxtfl.setText(Integer.toString(a.getACT()));
@@ -624,7 +637,9 @@ WhenInternationalPnl.setVisible(false);
         FirstNameTxtfl.setText(a.getStudent().getFirstName());
         LastNameTxtfl.setText(a.getStudent().getLastName());
         EmailTxtfl.setText(a.getStudent().getEmail());
-       BirthDateFtxf.setText(a.getStudent().getBirthDate().toString());
+        ZoneId defaultZoneId = ZoneId.systemDefault();
+        Date date = Date.from((a.getStudent().getBirthDate()).atStartOfDay(defaultZoneId).toInstant());
+       BirthDateFtxf.setValue(date);
         FirstMajorComboBox.setSelectedItem(a.getListMajors().get(0));
         SecondMajorComboBox.setSelectedItem(a.getListMajors().get(1));
         ThirdMajorComboBox.setSelectedItem(a.getListMajors().get(2));
@@ -634,17 +649,10 @@ WhenInternationalPnl.setVisible(false);
           ToeflTxtfl.setText(Integer.toString(((InternationalStudent)a.getStudent()).getTOEFlscore()));
           IeltsTxtfl.setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
           }
-        else {NoRBtn.setSelected(true);}
-      /* delete(a);
-        boolean shouldBeDeleted=true;
-         for(Application appl: applications){
-         if(appl.equals(a)){
-             shouldBeDeleted=false;
-         }
-        if(shouldBeDeleted){
+        else {NoRBtn.setSelected(true);
         delete(a);
         }
-    }*/
+     
 }
     public void delete(Application a){
      for(int i=0;i<this.applications.size();i++){
@@ -654,7 +662,9 @@ WhenInternationalPnl.setVisible(false);
     }
    
     }
-
+public void detailedView(Application a){
+  ( new DetailedView(a)).setVisible(true);  
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ACTLbl;
     private javax.swing.JFormattedTextField ACTScoreTxtfl;

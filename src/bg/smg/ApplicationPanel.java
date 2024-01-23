@@ -4,6 +4,7 @@
  */
 package bg.smg;
 
+import java.awt.event.ActionEvent;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,7 +22,7 @@ public class ApplicationPanel extends javax.swing.JPanel{
      * Creates new form ApplicationPanel
      * @param parent
      */
-    public ApplicationPanel( Application a) {
+    public ApplicationPanel( MainFrame frame ,Application a) {
         
         initComponents();
         FNameTxtf.setText(a.getStudent().getFirstName()); 
@@ -30,6 +31,21 @@ public class ApplicationPanel extends javax.swing.JPanel{
         LNameTxtfl.setEditable(false);
         GPATxtfl.setText(Double.toString(a.getGPA()));
         GPATxtfl.setEditable(false);
+        RedactBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                frame.edit(a);
+            }
+        });
+        DetailsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt){
+                frame.detailedView(a);
+}
+        });
+        RedactBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt){
+                frame.edit(a);
+}
+        });
         
     }
  
@@ -55,7 +71,7 @@ public class ApplicationPanel extends javax.swing.JPanel{
 
         setBackground(new java.awt.Color(205, 225, 238));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        setPreferredSize(new java.awt.Dimension(420, 140));
+        setPreferredSize(new java.awt.Dimension(520, 160));
 
         FirstNameLbl.setText("First name:");
 
@@ -89,17 +105,17 @@ public class ApplicationPanel extends javax.swing.JPanel{
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(FirstNameLbl)
                     .addComponent(LastNameLbl)
                     .addComponent(GPALbl))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(LNameTxtfl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(LNameTxtfl, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(FNameTxtf, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(GPATxtfl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DetailsBtn, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(RedactBtn, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -111,14 +127,7 @@ public class ApplicationPanel extends javax.swing.JPanel{
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(DetailsBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(RedactBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(DeleteBtn)
-                            .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(GPATxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(FNameTxtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -129,8 +138,14 @@ public class ApplicationPanel extends javax.swing.JPanel{
                             .addComponent(LastNameLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(GPALbl)
-                        .addGap(7, 7, 7)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addGap(7, 7, 7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(DetailsBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RedactBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DeleteBtn)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,12 +155,13 @@ public class ApplicationPanel extends javax.swing.JPanel{
     }//GEN-LAST:event_RedactBtnActionPerformed
 
     private void DetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DetailsBtnActionPerformed
-       ( new DetailedView(a)).setVisible(true);  
+     
         
     }//GEN-LAST:event_DetailsBtnActionPerformed
 
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
-   this.setVisible(false);
+   
+        
     }//GEN-LAST:event_DeleteBtnActionPerformed
 
 
