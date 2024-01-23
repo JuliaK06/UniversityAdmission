@@ -635,8 +635,8 @@ WhenInternationalPnl.setVisible(false);
           IeltsTxtfl.setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
           }
         else {NoRBtn.setSelected(true);}
-       delete(a);
-       /* boolean shouldBeDeleted=true;
+      /* delete(a);
+        boolean shouldBeDeleted=true;
          for(Application appl: applications){
          if(appl.equals(a)){
              shouldBeDeleted=false;

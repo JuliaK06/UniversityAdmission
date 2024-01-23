@@ -19,7 +19,8 @@ public class DetailedView extends javax.swing.JFrame {
      */
     public DetailedView(Application a) {
         initComponents();
-       
+       jTextField4.setVisible(false);
+       jTextField5.setVisible(false);
         FirstNameTxtfl.setText(a.getStudent().getFirstName());
         FirstNameTxtfl.setEditable(false);
         LastNameTxtfl.setText(a.getStudent().getLastName());
@@ -35,9 +36,18 @@ public class DetailedView extends javax.swing.JFrame {
       
         GPATxtfl.setText(Double.toString(a.getGPA()));
         GPATxtfl.setEditable(false);
+        jTextField1.setText(a.getListMajors().get(0));
+        jTextField1.setEditable(false);
+        jTextField2.setText(a.getListMajors().get(1));
+        jTextField2.setEditable(false);
+        jTextField3.setText(a.getListMajors().get(2));
+        jTextField3.setEditable(false);
         if(a.getStudent() instanceof InternationalStudent){
             YesRbtn.setSelected(true);
-            
+            jTextField4.setVisible(true);
+            jTextField4.setText(Integer.toString(((InternationalStudent)a.getStudent()).getTOEFlscore()));
+            jTextField5.setVisible(true);
+            jTextField5.setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
         }
         else {NoRbtn.setSelected(true);}
         NoRbtn.setEnabled(false);
