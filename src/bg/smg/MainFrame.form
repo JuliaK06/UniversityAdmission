@@ -317,9 +317,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="SATScoreTxtfl">
-          <Properties>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SATScoreTxtflActionPerformed"/>
           </Events>
@@ -333,9 +330,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="ACTScoreTxtfl">
-          <Properties>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ACTScoreTxtflActionPerformed"/>
           </Events>
@@ -471,7 +465,7 @@
                           <Component id="IeltsTxtfl" min="-2" pref="141" max="-2" attributes="0"/>
                           <Component id="ToeflTxtfl" min="-2" pref="141" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
+                      <EmptySpace pref="145" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -499,13 +493,10 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Muna" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Enter Toefl score:"/>
+                <Property name="text" type="java.lang.String" value="Enter TOEFL score:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="ToeflTxtfl">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Score"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ToeflTxtflActionPerformed"/>
               </Events>
@@ -519,9 +510,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="IeltsTxtfl">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Score"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IeltsTxtflActionPerformed"/>
               </Events>

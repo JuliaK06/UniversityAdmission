@@ -32,7 +32,7 @@ import javax.swing.text.DateFormatter;
  * @author Mimi
  */
 public class MainFrame extends javax.swing.JFrame {
- List<ApplicationPanel> appPans;
+
     List<Application> applications;
 
    
@@ -45,7 +45,7 @@ public class MainFrame extends javax.swing.JFrame {
 SATScoreTxtfl.setSize(108, 23);
 GPATxtfl.setSize(108, 23);
         applications = new ArrayList();
-       appPans=new ArrayList<>();        
+         
        WhenInternationalPnl.setVisible(false);
        
     }
@@ -144,7 +144,6 @@ GPATxtfl.setSize(108, 23);
         SATLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         SATLbl.setText("Enter SAT score:");
 
-        SATScoreTxtfl.setToolTipText("");
         SATScoreTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SATScoreTxtflActionPerformed(evt);
@@ -154,7 +153,6 @@ GPATxtfl.setSize(108, 23);
         ACTLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         ACTLbl.setText("Enter ACT score:");
 
-        ACTScoreTxtfl.setToolTipText("");
         ACTScoreTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ACTScoreTxtflActionPerformed(evt);
@@ -197,9 +195,8 @@ GPATxtfl.setSize(108, 23);
         WhenInternationalPnl.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
 
         ToefScoreLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
-        ToefScoreLbl.setText("Enter Toefl score:");
+        ToefScoreLbl.setText("Enter TOEFL score:");
 
-        ToeflTxtfl.setText("Score");
         ToeflTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ToeflTxtflActionPerformed(evt);
@@ -209,7 +206,6 @@ GPATxtfl.setSize(108, 23);
         IeltsScoreLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         IeltsScoreLbl.setText("Enter IELTS score:");
 
-        IeltsTxtfl.setText("Score");
         IeltsTxtfl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IeltsTxtflActionPerformed(evt);
@@ -229,7 +225,7 @@ GPATxtfl.setSize(108, 23);
                 .addGroup(WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(IeltsTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ToeflTxtfl, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         WhenInternationalPnlLayout.setVerticalGroup(
             WhenInternationalPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -535,11 +531,11 @@ int i=0;
         
          for(Application app: applications){
             ApplicationPanel AppPan= new ApplicationPanel( this,app);
-            AppPan.setBounds(50, (i*130+20), 445, 130);
+            AppPan.setBounds(50, (i*140+20), 445, 130);
           AppPan.a=app;
              jPanel2.add(AppPan);
              AppPan.setVisible(true);
-          appPans.add(AppPan);
+         
              
              
              i++;

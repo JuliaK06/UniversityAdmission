@@ -104,7 +104,7 @@ public class DetailedView extends javax.swing.JFrame {
         EmailLbl.setText("Email:");
 
         ToeflLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
-        ToeflLbl.setText("Toefl score:");
+        ToeflLbl.setText("TOEFL score:");
 
         ACTLbl.setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
         ACTLbl.setText("ACT score:");
