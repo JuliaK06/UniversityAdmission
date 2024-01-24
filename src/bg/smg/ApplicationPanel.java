@@ -34,6 +34,8 @@ public class ApplicationPanel extends javax.swing.JPanel{
         RedactBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 frame.edit(a);
+                
+                
             }
         });
         DetailsBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -41,13 +43,14 @@ public class ApplicationPanel extends javax.swing.JPanel{
                 frame.detailedView(a);
 }
         });
-        RedactBtn.addActionListener(new java.awt.event.ActionListener() {
+        DeleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt){
-                frame.edit(a);
+                frame.delete(a);
+               
 }
         });
-        
-    }
+        }
+    
  
 
     /**

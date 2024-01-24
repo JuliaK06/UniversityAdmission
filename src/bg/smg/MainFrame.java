@@ -32,7 +32,7 @@ import javax.swing.text.DateFormatter;
  * @author Mimi
  */
 public class MainFrame extends javax.swing.JFrame {
-
+ List<ApplicationPanel> appPans;
     List<Application> applications;
 
    
@@ -45,7 +45,8 @@ public class MainFrame extends javax.swing.JFrame {
 SATScoreTxtfl.setSize(108, 23);
 GPATxtfl.setSize(108, 23);
         applications = new ArrayList();
-        WhenInternationalPnl.setVisible(false);
+       appPans=new ArrayList<>();        
+       WhenInternationalPnl.setVisible(false);
        
     }
 
@@ -524,10 +525,10 @@ WhenInternationalPnl.setVisible(false);
         // TODO add your handling code here:
 
         jPanel1.setVisible(false);
-        jPanel2.setVisible(true);
         generateAppPanels();
-        
-          
+      
+        jPanel2.setVisible(true);
+          this.repaint();
     }//GEN-LAST:event_jMenu2MouseClicked
 private void generateAppPanels(){
 int i=0;
@@ -535,14 +536,15 @@ int i=0;
          for(Application app: applications){
             ApplicationPanel AppPan= new ApplicationPanel( this,app);
             AppPan.setBounds(50, (i*130+20), 445, 130);
-         
+          AppPan.a=app;
              jPanel2.add(AppPan);
-             
-             AppPan.a=app;
-             
              AppPan.setVisible(true);
+          appPans.add(AppPan);
+             
+             
              i++;
-         }}
+         }
+}
     private void NoRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoRBtnActionPerformed
         WhenInternationalPnl.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_NoRBtnActionPerformed
@@ -649,22 +651,33 @@ int i=0;
           ToeflTxtfl.setText(Integer.toString(((InternationalStudent)a.getStudent()).getTOEFlscore()));
           IeltsTxtfl.setText(Double.toString(((InternationalStudent)a.getStudent()).getIELTSscore()));
           }
-        else {NoRBtn.setSelected(true);
-        delete(a);
+        else {
+            NoRBtn.setSelected(true);
         }
-     
+      delete(a);
+ 
 }
-    public void delete(Application a){
+    public void delete(Application currApp){
      for(int i=0;i<this.applications.size();i++){
-        if(this.applications.get(i).equals(a)){
-            this.applications.remove(i);
-        }
-    }
-   
+        if(this.applications.get(i).equals(currApp)){ 
+            this.applications.remove(i); 
+            break;
+        
+    }  
+     }
+    
+     
+    jPanel2.removeAll();
+    generateAppPanels();
+    jPanel2.validate();
+    jPanel2.repaint();
+  
+    
     }
 public void detailedView(Application a){
-  ( new DetailedView(a)).setVisible(true);  
+  (new DetailedView(a)).setVisible(true);  
 }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ACTLbl;
     private javax.swing.JFormattedTextField ACTScoreTxtfl;

@@ -93,7 +93,6 @@ public class DetailedView extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Student Information Details");
         setBackground(new java.awt.Color(200, 230, 255));
         setFont(new java.awt.Font("Muna", 0, 14)); // NOI18N
